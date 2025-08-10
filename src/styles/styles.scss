@@ -1,0 +1,54 @@
+@layer primeng, mytheme;
+
+@import './_primeng-overrides.scss';
+
+
+/* COLORS */
+$primary-background-color: #EBE7D9;
+$secondary-background-color: #E0DDD0;
+
+$primary-color: #0F222D;
+$secondary-color: #879196;
+$third-color: #EDEFF4;
+$error-color: #F55139;
+
+
+/* TYPOGRAPHY */
+h1, h2, h3 {
+  all: unset;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 22px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+@media (min-width: 464px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+}
+
+
+/* GLOBAL HTML TAGS */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: $primary-color;
+}

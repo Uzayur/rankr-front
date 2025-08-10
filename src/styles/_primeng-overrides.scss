@@ -1,0 +1,70 @@
+/* COLORS */
+$primary-background-color: #EBE7D9;
+$secondary-background-color: #E0DDD0;
+
+$primary-color: #0F222D;
+$primary-hover-color: #223849;
+$primary-disabled-color: #879196;
+
+$secondary-color: #879196;
+$third-color: #EDEFF4;
+$error-color: #F55139;
+
+
+@layer mytheme {
+  :root {
+    --p-primary-color: #{$primary-color};
+    --p-primary-hover-color: #{$primary-hover-color};
+    --p-primary-active-color: #{$primary-color};
+    --p-primary-contrast-color: #{$primary-background-color};
+
+    --p-disabled-bg-color: #{$primary-disabled-color};
+
+    --p-button-padding-x: 24px;
+    --p-button-padding-y: 0.5rem;
+
+    --p-inputtext-background: #{$secondary-background-color};
+    --p-inputtext-disabled-background: #{$secondary-background-color};
+  }
+
+  /* Button */
+  .p-button, .p-button-secondary {
+    border: none;
+  }
+
+  /* Secondary button style override */
+  .p-button-secondary {
+    background-color: transparent;
+    border: none;
+    color: $primary-color;
+  }
+
+  .p-button-secondary:hover:not(.p-disabled) {
+    background-color: $third-color;
+  }
+
+
+  /* Input */
+  .p-inputtext {
+    height: 3rem;
+    //border: 1px solid transparent;
+    color: $primary-color;
+  }
+
+  .p-inputtext.p-invalid {
+    border: 1px solid $error-color;
+  }
+
+  .p-inputtext:enabled:focus:not(.p-invalid) {
+    border: 1px solid $secondary-color;
+  }
+
+  .p-inputtext::placeholder {
+    color: $secondary-color;
+  }
+
+
+  .p-inputtext:disabled {
+    opacity: 0.6;
+  }
+}
