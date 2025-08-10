@@ -14,6 +14,7 @@ export const routes: Routes = [
   },
   ...authRoutes,
 
+  // TODO: Add a 404 page
   {
     path: "**",
     redirectTo: "dashboard"
